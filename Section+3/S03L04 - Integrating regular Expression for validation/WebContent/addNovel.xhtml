@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+	<title>Displaying information</title>
+</h:head>
+<body>
+	<h2>Displaying information</h2>
+
+	Name: #{novel.name}
+	<br /> Author: #{novel.author}
+	<br /> Editor: #{novel.editor}
+	<br /> Edition: #{novel.edition}
+	<br /> Price: #{novel.price}
+	<br /> Genre:
+	<ul>
+		<ui:repeat var="temp" value="#{novel.genre}">
+			<li>#{temp}</li>
+		</ui:repeat>
+	</ul>
+	<br /> Description: #{novel.description}
+	<br /> Release Date: #{novel.releaseDate}
+	<br /> Origin: #{novel.origin}
+	<br /> Sale Out of India: #{novel.saleOutOfIndia}
+	<br /> Author email: #{novel.email}
+</body>
+</html>
