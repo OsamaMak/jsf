@@ -1,0 +1,27 @@
+{
+  "groups": [
+    {
+      "name": "net.ebc.otp",
+      "type": "com.ebc.otp.config.OTPConfigProperties",
+      "sourceType": "com.ebc.otp.config.OTPConfigProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "net.ebc.otp.expiry-in-minutes",
+      "type": "java.lang.Integer",
+      "sourceType": "com.ebc.otp.config.OTPConfigProperties"
+    },
+    {
+      "name": "net.ebc.otp.length",
+      "type": "java.lang.Integer",
+      "sourceType": "com.ebc.otp.config.OTPConfigProperties"
+    },
+    {
+      "name": "net.ebc.otp.simple",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.ebc.otp.config.OTPConfigProperties"
+    }
+  ],
+  "hints": []
+}

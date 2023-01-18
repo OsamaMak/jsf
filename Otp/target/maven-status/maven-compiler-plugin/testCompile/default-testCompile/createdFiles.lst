@@ -1,0 +1,5 @@
+otp\helper\OTPGeneratorTest.class
+otp\service\NotificationServiceTest.class
+otp\service\OTPServiceTest.class
+otp\OtpApplicationTests.class
+otp\service\EmailServiceTest.class
