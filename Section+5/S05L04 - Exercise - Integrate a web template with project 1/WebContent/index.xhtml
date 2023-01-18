@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+	<title>Employee Sign Up</title>
+</h:head>
+
+<h:form>
+	<h2>Employee Sign Up</h2>
+    
+	Full Name: <h:inputText id="name" value="#{employee.name}" label="Full name" required="true">
+	<f:validateLength maximum="40"/>
+	</h:inputText>
+	<br />
+	
+	Age: <h:inputText id="age" value="#{employee.age}" label="Age">
+	<f:validateLongRange minimum="18" maximum="65"/>
+	</h:inputText>
+	<br />
+	Gender: <h:selectOneRadio id="gender" value="#{employee.gender}" label="Gender" required="true">
+		<f:selectItem itemValue="male" itemLabel="Male" />
+		<f:selectItem itemValue="female" itemLabel="Female" />
+		<f:selectItem itemValue="others" itemLabel="Others" />
+	</h:selectOneRadio>
+	<br />  
+	        
+	Status: <h:selectOneMenu id="status" value="#{employee.status}">
+		<f:selectItem itemLabel="Married" itemValue="married" />
+		<f:selectItem itemLabel="Unmarried" itemValue="unmarried" />
+	</h:selectOneMenu>
+	<br />
+    Preferred Department:<h:selectManyCheckbox id="department"
+		value="#{employee.department}">
+		<f:selectItem itemLabel="IT" itemValue="IT" />
+		<f:selectItem itemLabel="Finance" itemValue="Finance" />
+		<f:selectItem itemLabel="HR" itemValue="HR" />
+	</h:selectManyCheckbox>
+	<br />
+	Referral Code: <h:inputText id="refcode" value="#{employee.refcode}" label="Ref-Code" 
+	validator="#{customValidation.validateRefCode}"/>
+	eg: ref123456
+	<br />
+	Additional comments: <h:inputTextarea id="comment"
+		value="#{employee.comment}" />
+	<br />
+	<h:commandButton value="Submit" action="employeeInfomation" />
+</h:form>
+<h:messages/>
+</html>
